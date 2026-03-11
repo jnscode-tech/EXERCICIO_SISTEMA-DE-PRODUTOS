@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Faz o corpo ter no mínimo a altura da tela */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* MENU */
+.container-menu ul {
+    list-style: none;
+    background-color: #333; 
+    display: flex; 
+    justify-content: center;
+}
+.container-menu li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.container-menu li a:hover {
+    background-color: #555;
+}
+/* FIM DO MENU */
+
+/* H2  */
+.titulo{
+    margin-top:45px;
+    text-align: center;
+    color:#40225e;
+}
+
+.h2-listar{
+    margin-bottom: 20px;
+    color: #40225e;
+    font-size: 2rem;
+    text-align: center;
+}
+/* FIM DO H2 */
+
+/* ÁREA CENTRALIZADA */
+.content-wrapper {
+    flex: 1; /* Ocupa todo o espaço restante, empurrando o footer para baixo */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+}
+/* FOMATAÇÃO DE FORMULÁRIO */
+.container-formulario {
+    display: flex;
+    flex-direction: column; /* Empilha o H2 em cima do Form */
+    align-items: center;    /* Centraliza os dois horizontalmente */
+    width: 100%;
+}
+/* CAIXA DO FORMULÁRIO */
+.container-formulario form {
+    background: white;
+    padding: 40px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* FORMULÁRIO - H2 */
+.container-formulario h2 , h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #40225e;
+    font-size: 2rem;
+    text-align: center;
+}
+/* FORMULÁRIO - P */
+.container-formulario p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* FORMULÁRIO - LABELS E INPUTS*/
+form label {
+    display: block;
+    margin-top: 18px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+/* FORMULÁRIO - BOTÕES */
+.btn-enviar,
+.btn-buscar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background-color: #40225e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.btn-enviar:hover {
+    background-color: #5a3083;
+}
+/* FORMULÁRIO - MENSAGEM */
+.container-formulario .mensagem{
+    font-weight: bold;
+    color: blue;
+}
+.mensagem{
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mensagem-limite{
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* FORMATAÇÃO DA PÁGINA, ÁREA QUE NÃO TEM FORMULÁRIO */
+
+.container-area {
+    text-align: center; /* centraliza todo conteúdo dentro deste container */
+    margin-top: 50px;   /* espaço do topo */
+}
+
+.container-area p{
+margin: 45px;
+font-size: 30px;
+color:#40225e;
+text-align: center;
+font-weight: bold;
+}
+
+.container-area img {
+    width: 450px;       /* define largura fixa */
+    height: auto;       /* mantém proporção da imagem */
+    display: block;     /* evita pequenos espaçamentos */
+    margin: 5px auto;  /* centraliza horizontalmente */
+}
+.mensagem{
+    font-weight: bold;
+    color: #40225e;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+/* FORMATAÇÃO DA TABELA */
+table{
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 4px 10px rgba(47, 42, 46, 0.1);
+}
+
+th{
+    background-color:#40225e;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+}
+
+td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tr:hover{
+    background-color: #e9f2ff;
+    transition: 0.2s;
+}
+/* RODAPÉ */
+
+.footer-paginas {
+    text-align: center;
+    background-color: #281526;
+    color: white;
+    width: 100%; 
+    padding: 20px 0;
+    margin-top: auto; /* Garante que ele fique no fundo */
+}
