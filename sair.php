@@ -24,7 +24,7 @@
 
 
    <p> OBRIGADA POR USAR NOSSO SISTEMA. ATÉ BREVE!!!</p>
-   <img src="image/LogoCaju.png" alt="Logo">
+   <img src="image/LogoCamisJu.png" alt="Logo">
     
 
 </div>

@@ -1,12 +1,12 @@
 <?php
-$arquivo = "alunos.txt";
+$arquivo = "produtos.txt";
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Lista de Alunos</title>
+<title>Lista Produtos</title>
 <link rel="stylesheet" href="style.css">
 
 </head>
@@ -29,7 +29,7 @@ $arquivo = "alunos.txt";
 
 
 
-<h2>Lista de Alunos Cadastrados</h2>
+<h2>Lista de Produtos em Estoque</h2>
 
 <?php
 
@@ -42,10 +42,10 @@ if(file_exists($arquivo))
 
         echo "<table>";
         echo "<tr>
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>Curso</th>
-                <th>Nota</th>
+                <th>Produto</th>
+                <th>Categoria</th>
+                <th>Estoque</th>
+                <th>Preço Unitário</th>
               </tr>";
 
         foreach($linhas as $linha)

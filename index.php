@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Escolar</title>
+    <title>Sistema de Produtos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,8 +24,8 @@
 <div class="container-area">
 
 
-    <p>Sistema de Cadastro de Alunos</p>
-    <img src="image/LogoCaju.png" alt="Logo">
+    <p>Sistema de Cadastro de Produtos - 2026 </p>
+    <img src="image/LogoCamisJu.png" alt="Logo">
     
 
 </div>

@@ -2,25 +2,38 @@
 <?php
 $mensagem = "";
 $mensagem2 = "";
-$arquivo = "alunos.txt";
+$arquivo = "produtos.txt";
+
+$produto = [];
+$categoria = [];
+$estoque = [];
+$preco = [];
 
 if(isset($_GET['sucesso']))
 {
-    $mensagem = "Aluno cadastrado com sucesso!";
+    $mensagem = "Produto cadastrado com sucesso!";
 }
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 
-    $nome = trim($_POST['nome']);
-    $idade = trim($_POST['idade']);
-    $curso = trim($_POST['curso']);
-    $nota = trim($_POST['nota']);
+    // pegar os dados digitados no FORM
+    $produto = trim($_POST['produto']);
+    $categoria = trim($_POST['categoria']);
+    $estoque = trim($_POST['estoque']);
+    $preco = trim($_POST['preco']);
 
-    // Array com os dados do aluno
-    $alunos = array($nome, $idade, $curso, $nota);
+    // colocar nos arrays
+    // Array com os dados dos produtos
+    $produtos[] = $produto;
+    // Array com os dados das categorias
+    $categorias[] = $categoria;
+    // Array com os dados do estoque
+    $estoques[] = $estoque;
+    // Array com os dados dos preços
+    $precos[] = $preco;
 
-    // Se o arquivo existir, contar quantos alunos já existem
+     // Se o arquivo existir, contar quantos produtos já existem
     if(file_exists($arquivo))
     {
         $linhas = file($arquivo);
@@ -31,22 +44,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         $total = 0;
     }
 
-    // Limite de 10 alunos
+    // Limite de 10 produtos
     if($total >= 10)
     {
-    $mensagem2 = "Limite de 10 alunos atingido para a turma!";
+    $mensagem2 = "Limite de 10 produtos atingido para o estoque";
     }
     else
     {
-        // Converter array em texto
-        $linha = implode("|", $alunos) . "\n";
+        // Converter dados em texto
+        $linha = $produtos[0] . "|" . $categorias[0] . "|" . $estoques[0] . "|" . $precos[0] . "\n";
 
+       // Salvar no arquivo txt
         file_put_contents($arquivo, $linha, FILE_APPEND);
 
         header("Location: cadastrar.php?sucesso=1");
         exit;
     }
-
 }
 ?>
 
@@ -55,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar aluno</title>
+    <title>Cadastro_Produto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -69,37 +82,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         <li><a href="sair.php">SAIR</a></li>
     </ul>
 </nav>
-<div class="titulo"> <h2>Cadastro de Alunos</h2><br></div>
+<div class="titulo"> <h2>Cadastro de Produtos</h2><br></div>
 
 <main class="content-wrapper">
 
     <div class="container-formulario">
 
-
         <form method="POST">
     
-            <p>Cadastre os alunos - 10 por turma</p>
+            <p>Cadastre os Produtos - Limite de 10 unidades</p>
 
-            <label for="nome">Nome do Aluno: </label>
-            <input type="text" name="nome" id="nome" placeholder="Digite o nome completo" required>
+            <label for="produto">Nome do Produto: </label>
+            <input type="text" name="produto" id="produto" placeholder="Digite o nome do produto." required>
 
-            <label for="idade">Idade do Aluno: </label>
-            <input type="number" name="idade" id="idade" min="0" max="100" placeholder="Digite somente número" required>
+            <label for="categoria">Digite a Categoria: </label>
+            <input type="text" name="categoria" id="categoria" placeholder="Digite a categoria do produto." required>
 
-            <label for="curso"> Curso do Aluno: </label>
-            <input type="text" name="curso" id="curso" maxlength="100" placeholder="Digite o curso" required>
+            <label for="estoque">Digite a quantidade em estoque: </label>
+            <input type="number" name="estoque" id="estoque" min="0" max="10000" placeholder="Digite somente o número." required>
 
-            <label for="curso"> Digite a nota do Aluno: </label>
-            <input type="number" name="nota" id="nota" min="0" max="10" placeholder="Digite nota de 0 a 10" required>
+            <label for="preco"> Digite o preço unitário </label>
+            <input type="number" name="preco" id="preco" min="0" max="100000"  step="0.01" placeholder="Digite o valor. Ex: 10.50" required>
             
             <button type="submit" class="btn-enviar">Cadastrar</button>
         </form>
         <br>
-
-    <?php if($mensagem != "") { ?>
-    <p class="mensagem"><?php echo $mensagem; ?></p>
-    <?php } ?>
-
      <!-- MENSAGENS ABAIXO DO FORM - CADASTRADO COM SUCESSO E LIMITE EXCEDIDO -->
     <?php if($mensagem != "") { ?>
         <p class="mensagem"><?php echo $mensagem; ?></p>

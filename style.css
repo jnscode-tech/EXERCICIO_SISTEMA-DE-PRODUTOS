@@ -15,7 +15,7 @@ body {
 /* MENU */
 .container-menu ul {
     list-style: none;
-    background-color: #333; 
+    background-color:#1a3048;
     display: flex; 
     justify-content: center;
 }
@@ -27,7 +27,7 @@ body {
     text-align: center;
 }
 .container-menu li a:hover {
-    background-color: #555;
+    background-color:  #008080;
 }
 /* FIM DO MENU */
 
@@ -35,12 +35,12 @@ body {
 .titulo{
     margin-top:45px;
     text-align: center;
-    color:#40225e;
+    color:#2F4F4F;
 }
 
 .h2-listar{
     margin-bottom: 20px;
-    color: #40225e;
+    color: #2F4F4F;
     font-size: 2rem;
     text-align: center;
 }
@@ -72,7 +72,7 @@ body {
 .container-formulario h2 , h2{
     margin-top: 10px;
     margin-bottom: 20px;
-    color: #40225e;
+    color: #2F4F4F;
     font-size: 2rem;
     text-align: center;
 }
@@ -81,7 +81,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     font-size: 0.9em;
-    color: #666;
+    color: #2F4F4F;
 }
 
 /* FORMULÁRIO - LABELS E INPUTS*/
@@ -89,7 +89,7 @@ form label {
     display: block;
     margin-top: 18px;
     font-weight: bold;
-    color: #333;
+    color: #2F4F4F;
     font-size: 16px;
 }
 form input {
@@ -106,7 +106,7 @@ form input {
     width: 100%;
     padding: 12px;
     margin-top: 25px;
-    background-color: #40225e;
+    background-color: #2F4F4F;
     color: white;
     border: none;
     border-radius: 6px;
@@ -114,12 +114,12 @@ form input {
     font-size: 17px;
 }
 .btn-enviar:hover {
-    background-color: #5a3083;
+    background-color: #1b0344;
 }
 /* FORMULÁRIO - MENSAGEM */
 .container-formulario .mensagem{
     font-weight: bold;
-    color: blue;
+    color: #411293;
 }
 .mensagem{
     color: green;
@@ -144,7 +144,7 @@ form input {
 .container-area p{
 margin: 45px;
 font-size: 30px;
-color:#40225e;
+color:#2F4F4F;
 text-align: center;
 font-weight: bold;
 }
@@ -173,7 +173,7 @@ table{
 }
 
 th{
-    background-color:#40225e;
+    background-color: #1a3048;
     color: white;
     padding: 12px;
     text-align: center;
@@ -195,12 +195,11 @@ tr:hover{
     transition: 0.2s;
 }
 /* RODAPÉ */
-
 .footer-paginas {
     text-align: center;
-    background-color: #281526;
+    background-color:#1a3048;
     color: white;
     width: 100%; 
-    padding: 20px 0;
+    padding: 12px 0;
     margin-top: auto; /* Garante que ele fique no fundo */
 }

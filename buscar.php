@@ -1,6 +1,6 @@
 <?php
 
-$arquivo = "alunos.txt";
+$arquivo = "produtos.txt";
 $resultados = array();
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $dados = explode("|", trim($linha));
 
-            // procura pelo nome digitado - stripos = faz com que não seja case sensitive
+            // Busca pelo nome do produto (não diferencia maiúscula/minúscula)
             if(stripos($dados[0], $nome_busca) !== false)
             {
                 $resultados[] = $dados;
@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Buscar Aluno</title>
+<title>Busca_Produto</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -45,13 +45,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     </ul>
 </nav>
 
-<div class="titulo"> <h2>Buscar Alunos</h2><br></div>
+<div class="titulo"> <h2>Buscar Produto pelo Nome</h2><br></div>
 
 <div class="container-formulario">
 <form method="POST">
 
-<label>Digite o nome do aluno:</label><br>
-<input type="text" name="nome" required>
+<label>Digite o Nome do Produto:</label><br>
+<input type="text" name="nome" placeholder="Digite o nome do produto." required>
 
 <br><br>
 
@@ -67,19 +67,19 @@ if(!empty($resultados))
 {
     echo "<table border='1'>";
     echo "<tr>
-            <th>Nome</th>
-            <th>Idade</th>
-            <th>Curso</th>
-            <th>Nota</th>
+            <th>Produto</th>
+            <th>Categoria</th>
+            <th>Estoque</th>
+            <th>Preço</th>
           </tr>";
 
-    foreach($resultados as $aluno)
+    foreach($resultados as $produto)
     {
         echo "<tr>";
-        echo "<td>".$aluno[0]."</td>";
-        echo "<td>".$aluno[1]."</td>";
-        echo "<td>".$aluno[2]."</td>";
-        echo "<td>".$aluno[3]."</td>";
+        echo "<td>".$produto[0]."</td>";
+        echo "<td>".$produto[1]."</td>";
+        echo "<td>".$produto[2]."</td>";
+        echo "<td>".$produto[3]."</td>";
         echo "</tr>";
     }
 
@@ -87,8 +87,7 @@ if(!empty($resultados))
 }
 else if($_SERVER["REQUEST_METHOD"] == "POST")
 {
-
-    echo "<p class='mensagem'>Aluno não encontrado.</p>";
+    echo "<p class='mensagem'>Produto não encontrado.</p>";
 }
 
 ?>

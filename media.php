@@ -1,7 +1,7 @@
 <?php
-$arquivo = "alunos.txt";
-$somaNotas = 0;
-$totalAlunos = 0;
+$arquivo = "produtos.txt";
+$somaProdutos = 0;
+$totalProdutos = 0;
 
 if(file_exists($arquivo))
 {
@@ -11,13 +11,13 @@ if(file_exists($arquivo))
     {
         $dados = explode("|", trim($linha));
 
-        $nota = $dados[3]; // posição da nota no cadastro: nome, idade, nota
-        $somaNotas += $nota;
-        $totalAlunos++;
+        $produto = $dados[2]; // posição do valor do produto: nome, idade, nota
+        $somaProdutos += $produto;
+        $totalProdutos++;
     }
-    if($totalAlunos > 0)
+    if($totalProdutos > 0)
     {
-        $media = $somaNotas / $totalAlunos;
+        $media = $somaProdutos/$totalProdutos;
     }
     else
     {
@@ -30,7 +30,7 @@ if(file_exists($arquivo))
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Média dos Alunos</title>
+<title>Média_Produtos</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -44,17 +44,17 @@ if(file_exists($arquivo))
         <li><a href="sair.php">SAIR</a></li>
     </ul>
 </nav>
-<div class="titulo"> <h2>Média das Notas</h2><br></div>
+<div class="titulo"> <h2>Média dos Produtos em Estoque</h2><br></div>
 
-<?php if($totalAlunos > 0) { ?>
+<?php if($totalProdutos > 0) { ?>
 
 <table class="tabela-media">
     <tr>
-        <th>Total de Alunos</th>
-        <th>Média das Notas</th>
+        <th>Total de Produtos</th>
+        <th>Média dos Produtos em Estoque</th>
     </tr>
     <tr>
-        <td><?php echo $totalAlunos; ?></td>
+        <td><?php echo $totalProdutos; ?></td>
         <td><?php echo number_format($media, 2); ?></td>
     </tr>
 </table>
@@ -62,7 +62,7 @@ if(file_exists($arquivo))
 <?php }
  else {
 ?>
-<p class="mensagem">Nenhum aluno cadastrado.</p>
+<p class="mensagem">Nenhum produto está cadastrado no sistema.</p>
 
 <?php } ?>
 

@@ -1,10 +1,10 @@
-Juliana Nascimento dos Santos|41|Back-End|10
-Camila Macedo Mendes|30|Back-End|9
-Matheus Guida|24|Back-End|8
-Amanda Sol Vida|37|Back-End|10
-Alexandre Galacho|25|Back-End|7
-Lorena Feretti|28|Back-End|9
-Maria Eduarda Juquinha|28|Back-End|10
-Paulo Mendes|38|Back-End|9
-Elvira Rodrigues|47|Back-End|10
-Maria das Graças das Nove|42|Back-End|9
+Sache Gato Feliz|Alimento|45|4.50
+Ração Dog Forte|Alimento|60|56.90
+Areia feliz|Higiene|60|45.90
+Macaco Alegre|Brinquedo|15|28.90
+Mordedor feliz|Brinquedo|21|17.90
+Tapete Higiênico chão limpo|Higiene|100|59.90
+Alpiste feliz|Alimento|130|15.00
+Ração granular peixe feliz|Alimento|9|30.00
+Osso|Brinquedo|60|11.50
+Escova De Dente para Cachorro|Higiene|20|14.50
