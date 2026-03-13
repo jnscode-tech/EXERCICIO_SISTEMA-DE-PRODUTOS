@@ -6,5 +6,3 @@ Mordedor feliz|Brinquedo|21|17.90
 Tapete Higiênico chão limpo|Higiene|100|59.90
 Alpiste feliz|Alimento|130|15.00
 Ração granular peixe feliz|Alimento|9|30.00
-Osso|Brinquedo|60|11.50
-Escova De Dente para Cachorro|Higiene|20|14.50
