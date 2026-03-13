@@ -1,8 +1,10 @@
 Sache Gato Feliz|Alimento|45|4.50
 Ração Dog Forte|Alimento|60|56.90
-Areia feliz|Higiene|60|45.90
+Areia Feliz|Higiene|60|45.90
 Macaco Alegre|Brinquedo|15|28.90
-Mordedor feliz|Brinquedo|21|17.90
-Tapete Higiênico chão limpo|Higiene|100|59.90
-Alpiste feliz|Alimento|130|15.00
-Ração granular peixe feliz|Alimento|9|30.00
+Mordedor Feliz|Brinquedo|21|17.80
+Tapete Higiênico Chão Feliz|Higiene|100|59.90
+Alpiste Pássaro Feliz|Alimento|130|15.00
+Ração Granular Peixe Feliz|Alimento|9|30.49
+Osso mordedor|Brinquedo|42|11.50
+Escova de Dente Bafinho Feliz|Higiene|14|19.90
